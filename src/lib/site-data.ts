@@ -118,7 +118,7 @@ export const resultCards = [
     category: "캠페인 런칭",
     challenge: "짧은 일정 안에 후보 신뢰감과 메시지를 동시에 보여줘야 했음",
     change: "QR과 SNS 확산에 맞춘 모바일 우선 랜딩 구조로 빠르게 제작함",
-    metric: "5일 내 오픈",
+    metric: "2일 내 오픈",
   },
 ] as const;
 
