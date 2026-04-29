@@ -13,7 +13,7 @@ export function FloatingKakaoButton() {
             alt="카카오톡"
             width={28}
             height={28}
-            className="h-7 w-7"
+            className="h-11 w-11"
           />
           <span>카카오톡 상담</span>
         </span>
