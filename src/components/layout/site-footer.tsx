@@ -8,7 +8,7 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-content gap-10 lg:grid-cols-[1.2fr_0.8fr]">
         <div>
           <p className="font-heading text-xl font-semibold tracking-tight">
-            CONV Studio
+            CONV-Studio
           </p>
           <p className="mt-4 max-w-md text-sm leading-6 text-white/68">
             문의가 생기는 홈페이지를 만듭니다. 더 높은 신뢰, 더 명확한 동선,

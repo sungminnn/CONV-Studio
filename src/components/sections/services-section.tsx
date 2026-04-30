@@ -9,7 +9,7 @@ export function ServicesSection() {
         <SectionHeading
           eyebrow="서비스"
           title="성과가 필요한 두 고객군에 맞춘 전환 구조."
-          description="CONV Studio는 문의를 늘려야 하는 비즈니스와 빠르게 신뢰를 만들어야 하는 캠페인 팀, 두 가지 상황에 맞춰 설계됩니다."
+          description="CONV-Studio는 문의를 늘려야 하는 비즈니스와 빠르게 신뢰를 만들어야 하는 캠페인 팀, 두 가지 상황에 맞춰 설계됩니다."
         />
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           {serviceColumns.map((column) => (

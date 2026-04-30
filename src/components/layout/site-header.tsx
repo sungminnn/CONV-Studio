@@ -27,7 +27,7 @@ export function SiteHeader() {
     >
       <div className="mx-auto flex max-w-content items-center justify-between gap-8 px-6 py-5 sm:px-8 sm:py-6 lg:px-10">
         <Link href="/" className="font-heading text-2xl font-semibold tracking-tight text-fg sm:text-3xl">
-          CONV Studio
+          CONV-Studio
         </Link>
         <nav className="hidden items-center gap-9 text-lg font-medium text-fg/72 lg:flex">
           {navigationItems.map((item) => (

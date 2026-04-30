@@ -4,6 +4,11 @@ import { CtaButton } from "@/components/ui/cta-button";
 import { ctaLinks, heroMetrics, methodSteps } from "@/lib/site-data";
 
 export function HeroSection() {
+  const highlightStrokeStyle = {
+    backgroundColor: "rgba(30, 127, 240, 0.88)",
+    clipPath: "polygon(3% 0, 100% 0, 97% 100%, 0 100%)",
+  } as const;
+
   const heroIcons = [
     <svg
       key="seo"
@@ -111,28 +116,50 @@ export function HeroSection() {
             </div>
           </div>
           <h1 className="mt-8 font-heading text-6xl font-semibold leading-[1.02] tracking-[-0.04em] text-fg sm:text-7xl lg:text-[5.5rem]">
-            <span className="relative inline-block">
-              <span className="relative z-10">문의가 생기는</span>
-              <span
-                aria-hidden="true"
-                className="absolute inset-x-[-0.08em] top-[58%] z-0 h-[0.52em] -translate-y-1/2"
-                style={{
-                  backgroundColor: "rgba(30, 127, 240, 0.88)",
-                  clipPath: "polygon(3% 0, 100% 0, 97% 100%, 0 100%)",
-                }}
-              />
+            <span className="sm:hidden">
+              <span className="relative block w-fit">
+                <span className="relative z-10">문의가</span>
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-x-[-0.08em] top-[58%] z-0 h-[0.52em] -translate-y-1/2"
+                  style={highlightStrokeStyle}
+                />
+              </span>
+              <span className="relative mt-1 block w-fit">
+                <span className="relative z-10">생기는</span>
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-x-[-0.08em] top-[58%] z-0 h-[0.52em] -translate-y-1/2"
+                  style={highlightStrokeStyle}
+                />
+              </span>
+              <span className="relative mt-1 block w-fit">
+                <span className="relative z-10">홈페이지.</span>
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-x-[-0.08em] top-[58%] z-0 h-[0.52em] -translate-y-1/2"
+                  style={highlightStrokeStyle}
+                />
+              </span>
             </span>
-            <br />
-            <span className="relative inline-block">
-              <span className="relative z-10">홈페이지.</span>
-              <span
-                aria-hidden="true"
-                className="absolute inset-x-[-0.08em] top-[58%] z-0 h-[0.52em] -translate-y-1/2"
-                style={{
-                  backgroundColor: "rgba(30, 127, 240, 0.88)",
-                  clipPath: "polygon(3% 0, 100% 0, 97% 100%, 0 100%)",
-                }}
-              />
+            <span className="hidden sm:inline">
+              <span className="relative inline-block">
+                <span className="relative z-10">문의가 생기는</span>
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-x-[-0.08em] top-[58%] z-0 h-[0.52em] -translate-y-1/2"
+                  style={highlightStrokeStyle}
+                />
+              </span>
+              <br />
+              <span className="relative inline-block">
+                <span className="relative z-10">홈페이지.</span>
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-x-[-0.08em] top-[58%] z-0 h-[0.52em] -translate-y-1/2"
+                  style={highlightStrokeStyle}
+                />
+              </span>
             </span>
           </h1>
           <p className="mt-6 max-w-2xl text-xl leading-9 text-fg/72 sm:text-2xl">

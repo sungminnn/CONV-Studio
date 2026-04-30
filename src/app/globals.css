@@ -1,10 +1,10 @@
 @font-face {
-  font-family: "Gmarket Sans";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
-    format("woff");
-  font-weight: 300;
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/woff2/PretendardVariable.woff2")
+    format("woff2-variations");
+  font-weight: 45 920;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -13,7 +13,7 @@
     format("woff");
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -22,7 +22,7 @@
     format("woff");
   font-weight: 700;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @tailwind base;
@@ -38,7 +38,7 @@
   --color-cta: #e61e2b;
   --color-cta-dark: #bb1020;
   --color-accent: #00b5e2;
-  --font-body: "Gmarket Sans";
+  --font-body: "Pretendard";
   --font-heading: "Gmarket Sans";
 }
 
@@ -56,6 +56,7 @@ body {
   background: var(--color-bg);
   color: var(--color-fg);
   font-family: var(--font-body), sans-serif;
+  font-weight: 450;
   text-rendering: optimizeLegibility;
   font-size: 17px;
   line-height: 1.65;
