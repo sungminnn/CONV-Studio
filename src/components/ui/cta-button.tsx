@@ -26,7 +26,7 @@ export function CtaButton({
   return (
     <Link
       href={href}
-      className={`inline-flex min-h-14 items-center justify-center rounded-full px-7 py-3.5 text-base font-semibold tracking-tight transition duration-200 ${styles[variant]} ${className}`}
+      className={`inline-flex min-h-14 max-w-full items-center justify-center rounded-full px-7 py-3.5 text-center text-base font-semibold tracking-tight transition duration-200 ${styles[variant]} ${className}`}
     >
       {children}
     </Link>
