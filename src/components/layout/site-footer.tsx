@@ -26,7 +26,7 @@ export function SiteFooter() {
                   <Link href={item.href} className="block hover:text-white">
                     {item.label}
                   </Link>
-                  {item.children ? (
+                  {"children" in item ? (
                     <div className="mt-2 space-y-2 pl-3 text-white/58">
                       {item.children.map((child) => (
                         <Link key={child.label} href={child.href} className="block hover:text-white">

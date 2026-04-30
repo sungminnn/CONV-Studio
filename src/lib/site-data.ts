@@ -1,3 +1,14 @@
+export type NavigationChild = {
+  label: string;
+  href: string;
+};
+
+export type NavigationItem = {
+  label: string;
+  href: string;
+  children?: readonly NavigationChild[];
+};
+
 export const navigationItems = [
   { label: "홈", href: "/" },
   {
@@ -11,7 +22,7 @@ export const navigationItems = [
   { label: "포트폴리오", href: "#results" },
   { label: "가격안내", href: "#pricing" },
   { label: "문의하기", href: "#inquiry-form" },
-] as const;
+] as const satisfies readonly NavigationItem[];
 
 export const heroMetrics = [
   "SEO 최적화 구조",

@@ -31,7 +31,7 @@ export function SiteHeader() {
         </Link>
         <nav className="hidden items-center gap-9 text-lg font-medium text-fg/72 lg:flex">
           {navigationItems.map((item) => (
-            item.children ? (
+            "children" in item ? (
               <div key={item.label} className="group relative">
                 <Link href={item.href} className="transition hover:text-fg">
                   {item.label}
