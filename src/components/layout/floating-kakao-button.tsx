@@ -5,8 +5,8 @@ import { ctaLinks } from "@/lib/site-data";
 
 export function FloatingKakaoButton() {
   return (
-    <div className="fixed bottom-5 right-5 z-50 sm:bottom-6 sm:right-6">
-      <CtaButton href={ctaLinks.consultation} className="px-5 py-4">
+    <div className="fixed bottom-5 left-5 right-5 z-50 sm:bottom-6 sm:left-auto sm:right-6">
+      <CtaButton href={ctaLinks.consultation} className="flex w-full justify-center px-5 py-4 sm:w-auto">
         <span className="flex items-center gap-2">
           <Image
             src="/images/kakaotalk.png"
