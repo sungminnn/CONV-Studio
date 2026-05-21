@@ -2,6 +2,10 @@
 
 CONV Studio is a conversion-focused landing page for a digital web studio. Instead of presenting a generic agency portfolio, the page is structured around clear business outcomes: KakaoTalk consultation, inquiry form submission, service segmentation, pricing confidence, and trust-building content.
 
+## Overview
+
+The project focuses on product-minded frontend development, combining funnel design, reusable component architecture, deployment readiness, SEO-aware content structure, and business conversion strategy.
+
 ## Highlights
 
 - Built a production-ready Next.js landing page with a mobile-first conversion funnel.
@@ -52,7 +56,3 @@ docker compose up -d --build app nginx
 ```
 
 For HTTPS, set `DOMAIN` and `LETSENCRYPT_EMAIL` in `.env`, issue a certificate with the included Certbot service, then restart Nginx.
-
-## Overview
-
-The project focuses on product-minded frontend development, combining funnel design, reusable component architecture, deployment readiness, SEO-aware content structure, and business conversion strategy.
