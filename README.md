@@ -53,6 +53,6 @@ docker compose up -d --build app nginx
 
 For HTTPS, set `DOMAIN` and `LETSENCRYPT_EMAIL` in `.env`, issue a certificate with the included Certbot service, then restart Nginx.
 
-## Resume Notes
+## Overview
 
-This project is useful for demonstrating product-minded frontend development: funnel design, reusable component architecture, deployment readiness, SEO-aware content structure, and business conversion strategy.
+The project focuses on product-minded frontend development, combining funnel design, reusable component architecture, deployment readiness, SEO-aware content structure, and business conversion strategy.
