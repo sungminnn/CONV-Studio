@@ -1,71 +1,58 @@
-# CONV-Studio
+# CONV Studio
 
-CONV Studio 랜딩 페이지 설계 초안은 [docs/conv-studio-plan.md](/C:/project/CONV-Studio/docs/conv-studio-plan.md) 에 정리되어 있습니다.
+CONV Studio is a conversion-focused landing page for a digital web studio. Instead of presenting a generic agency portfolio, the page is structured around clear business outcomes: KakaoTalk consultation, inquiry form submission, service segmentation, pricing confidence, and trust-building content.
 
-핵심 방향:
-- 포트폴리오형이 아닌 전환 중심 랜딩 페이지
-- 1차 전환: `KakaoTalk 상담`
-- 2차 전환: `문의 폼 제출`
+## Highlights
 
-## Docker Deploy
+- Built a production-ready Next.js landing page with a mobile-first conversion funnel.
+- Structured the page around high-intent sections: problem framing, method, services, trust points, results, pricing, FAQ, and final CTA.
+- Created reusable section and UI components for headings, badges, buttons, result cards, pricing cards, and layout elements.
+- Added Docker, Docker Compose, Nginx templates, and Certbot configuration for HTTPS deployment.
+- Documented product strategy in `docs/conv-studio-plan.md` to connect UX decisions with business goals.
 
-이 저장소는 Next.js 앱이 루트에 있으므로 별도의 `app/` 폴더로 옮길 필요 없이, 저장소 루트에서 바로 Docker 배포를 진행합니다.
+## Tech Stack
 
-배포 파일:
-- `Dockerfile`
-- `docker-compose.yml`
-- `nginx/http.conf.template`
-- `nginx/https.conf.template`
-- `.env.example`
+- Next.js 15
+- React 19
+- TypeScript
+- Tailwind CSS
+- Docker / Docker Compose
+- Nginx
+- Certbot
 
-## HTTPS Deploy
+## Project Structure
 
-도메인: `io5869.cafe24.com`
+```text
+src/
+  app/                 # App Router entry, layout, and global styles
+  components/
+    layout/            # Header, footer, floating Kakao CTA
+    sections/          # Landing page sections
+    ui/                # Shared presentation components
+  lib/site-data.ts     # Centralized page content and CTA data
+docs/
+  conv-studio-plan.md  # Product and UX strategy document
+nginx/                 # HTTP/HTTPS reverse proxy templates
+```
 
-먼저 GitHub 반영 후 서버에서 실행:
+## Run Locally
 
 ```bash
-cd /srv/apps/CONV-Studio
-git pull
+npm install
+npm run dev
+```
+
+Open `http://localhost:3000`.
+
+## Docker Deployment
+
+```bash
 cp .env.example .env
-```
-
-`.env`에서 최소한 아래 값은 확인합니다.
-
-```env
-DOMAIN=io5869.cafe24.com
-LETSENCRYPT_EMAIL=your-email@example.com
-```
-
-1차 기동:
-
-```bash
 docker compose up -d --build app nginx
 ```
 
-인증서 발급:
+For HTTPS, set `DOMAIN` and `LETSENCRYPT_EMAIL` in `.env`, issue a certificate with the included Certbot service, then restart Nginx.
 
-```bash
-docker compose run --rm certbot certonly \
-  --webroot \
-  --webroot-path /var/www/certbot \
-  -d io5869.cafe24.com \
-  --email your-email@example.com \
-  --agree-tos \
-  --no-eff-email
-```
+## Resume Notes
 
-인증서 반영:
-
-```bash
-docker compose restart nginx
-```
-
-이후 `https://io5869.cafe24.com` 으로 접속합니다.
-
-갱신 시:
-
-```bash
-docker compose run --rm certbot renew
-docker compose restart nginx
-```
+This project is useful for demonstrating product-minded frontend development: funnel design, reusable component architecture, deployment readiness, SEO-aware content structure, and business conversion strategy.
